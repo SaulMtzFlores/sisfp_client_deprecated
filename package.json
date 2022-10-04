@@ -6,7 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild": "ng build --prod"
+  },
+  "engines": {
+    "node": "v16.13.2",
+    "npm": "8.1.2"
   },
   "private": true,
   "dependencies": {
