@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NotyService } from 'src/app/providers/noty';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private noty : NotyService
+  ) {}
 
   ngOnInit(): void {
+    this.noty.pop('success', 'Heeeey', 5000);
   }
 
 }

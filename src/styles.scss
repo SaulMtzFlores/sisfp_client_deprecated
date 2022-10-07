@@ -2,6 +2,10 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
+@import '~notyf/notyf.min.css';
+
 
 html{
   --tw-bg-opacity: 1;
@@ -12,4 +16,41 @@ html{
       --tw-bg-opacity: 1;
       background-color: rgb(15 23 42 / var(--tw-bg-opacity));
   }
+}
+
+
+.noty_theme__mint.noty_type__success {
+  background-color: #60a917;
+  color: #fff;
+
+  .noty_progressbar {
+    opacity: 0.4;
+  }
+}
+
+.noty_theme__mint.noty_type__info,
+.noty_theme__mint.noty_type__information {
+  background-color: #1ba1e2;
+  color: #fff;
+  .noty_progressbar {
+    opacity: 0.4;
+  }
+}
+
+.noty_theme__mint.noty_type__warning {
+  .noty_progressbar {
+    opacity: 0.3;
+  }
+}
+.noty_theme__mint.noty_type__error{
+  background-color: #c75957;
+  color: #fff;
+
+  .noty_progressbar {
+    opacity: 0.4;
+  }
+}
+
+::-ms-reveal{
+  display: none;
 }
