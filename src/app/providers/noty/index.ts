@@ -17,7 +17,7 @@ export class NotyService implements OnDestroy {
     information: 'fas fa-info-circle'
   };
 
-  public listenerTranslate!: Subscription;
+  public listenerTranslate: Subscription;
 
   constructor() {
     Noty.setMaxVisible(10);
@@ -46,8 +46,8 @@ export class NotyService implements OnDestroy {
       modal: false,
       killer: false,
       animation: {
-        open: 'animate__animated animate__fadeInRight',
-        close: 'animate__animated animate__fadeOutRight',
+        open: 'moderateSpeed fadeInRightNoty',
+        close: 'moderateSpeed fadeOutDownNoty',
       },
     });
     noty.show();
@@ -61,6 +61,14 @@ export class NotyService implements OnDestroy {
     if(this.listenerTranslate){
       this.listenerTranslate.unsubscribe();
     }
+  }
+
+  noty_test(){
+    new Noty({
+      type: 'success',
+      layout: 'topRight',
+      text: 'Some notification text'
+    }).show();
   }
 
 }
